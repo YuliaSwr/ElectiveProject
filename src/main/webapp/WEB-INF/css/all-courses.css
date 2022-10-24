@@ -1,0 +1,247 @@
+
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
+    height: content-box;
+
+    margin: 10px 0;
+}
+
+.toolbar .filter,
+.toolbar .sort {
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    color: var(--text-color);
+}
+
+.toolbar .filter .title,
+.toolbar .sort .title {
+    margin: 0;
+    margin-right: 7px;
+}
+
+.toolbar .filter select {
+    background: var(--profile-side);
+    color: var(--text-color);
+    border: 0;
+    border-radius: 50px;
+
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.toolbar .sort a {
+    background: var(--profile-side);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 0;
+    border-radius: 50px;
+
+    margin: 0 7px;
+    padding: 5px 10px;
+    font-size: 15px;
+
+    transition: all ease 0.2s;
+}
+
+.toolbar .sort a:hover {
+    box-shadow: 0 0 3px #ccc;
+}
+
+
+.list {
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list .course-box {
+    width: 100%;
+    height: 170px;
+    background-color: var(--profile-side);
+
+    padding: 20px;
+    margin: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px var(--shadow-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-box .course-photo {
+    width: 15%;
+    min-width: 180px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.course-box .course-photo img {
+    height: 150px;
+    width: 150px;
+
+    border-radius: 10px;
+}
+
+.course-box .course-info {
+    width: 65%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    color: var(--text-color);
+}
+
+.course-box .course-info .title {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.course-box .course-info .description {
+    width: 100%;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    /*color: rgba(0, 0, 0, 0.7);*/
+}
+
+.course-box .course-info .sphere {
+    padding: 5px 10px;
+    background-color: #D9D7EE;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 50px;
+    letter-spacing: 1pt;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.course-box .course-info .teacher {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.course-box .course-num {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: var(--text-color);
+}
+
+.course-box .course-num .duration {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.course-box .course-num .date span {
+    font-weight: 500;
+}
+
+.course-box .course-num .students-number {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.course-box .course-num .button a {
+    text-decoration: none;
+    color: var(--text-color);
+    border: 0;
+    border-radius: 50px;
+
+    margin: 7px 0;
+    padding: 7px 20px;
+    font-size: 15px;
+
+    transition: all ease 0.2s;
+}
+
+.course-box .course-num .button a:hover {
+    color: #fff;
+}
+
+.course-box .course-num .button.start-button a,
+.course-box .course-num .button.register a{
+    background: var(--sec-color);
+}
+
+.course-box .course-num .button.leave-button a{
+    background: var(--delete-btn);
+}
+
+.course-box .course-num .students-number span {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .tabs {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .tabs .tab {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .tabs .tab a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--reverse-text-color);
+    background: var(--main-accent);
+    border-right: 1px solid var(--border-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .tabs .tab a:hover {
+    color: #000;
+    background: var(--tab);
+}
+
+.content .tabs .tab:last-child a{
+    border-right: 0;
+}

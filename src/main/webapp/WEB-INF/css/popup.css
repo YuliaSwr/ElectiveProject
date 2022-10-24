@@ -1,0 +1,188 @@
+.popup-outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.4s ease;
+}
+
+body.show .popup-outer {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.show-del .popup-outer.delete-popup {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-box {
+    position: relative;
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 25px 30px;
+
+    max-width: 700px;
+    width: 70%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 20px;
+
+    color: var(--text-color);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.popup-box .close-button:hover {
+    color: #000;
+}
+
+.popup-content .popup-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.popup-content .popup-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.popup-form .input-block {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.popup-form .input-block input,
+.popup-form .input-block select {
+    height: 28px;
+    width: 100%;
+
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid var(--table);
+    padding-left: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.popup-form .input-block input:focus,
+.popup-form .input-block input:valid {
+    border: 2px solid var(--text-accent-2);
+}
+
+.popup-form .input-block label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.popup-form .input-block input.read-only {
+    color: #ccc;
+}
+
+.submit-button {
+    height: 35px;
+    margin: 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button input {
+    cursor: pointer;
+
+    height: 100%;
+    width: 80%;
+    max-width: 250px;
+
+    color: #fff;
+    background: var(--main-accent);
+
+    border: 0;
+    border-radius: 3px;
+}
+
+.submit-button input:hover,
+.submit-button input:focus {
+    color: #fff;
+    background: #3750B4;
+}
+
+.popup-outer.delete-popup .popup-box {
+    width: 350px;
+    height: 150px;
+    padding: 30px;
+}
+
+.popup-outer.delete-popup .popup-content .popup-title {
+    font-size: 15px;
+}
+
+.popup-outer.delete-popup .popup-box form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-outer.delete-popup .cancel-button input,
+.popup-outer.delete-popup .submit-button input {
+    width: 100px;
+    height: 30px;
+}
+
+.popup-outer.delete-popup .submit-button,
+.popup-outer.delete-popup .cancel-button {
+    margin: 10px;
+}
+
+.popup-outer.delete-popup .cancel-button input {
+    cursor: pointer;
+
+    color: #fff;
+    background: #e65854;
+
+    border: 0;
+    border-radius: 3px;
+}
+
+.popup-outer.delete-popup .cancel-button input:hover {
+    background: #a64542;
+}
+
+@media (max-width: 584px) {
+    .popup-content {
+        max-width: 100%;
+    }
+
+    .popup-form .input-block {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}

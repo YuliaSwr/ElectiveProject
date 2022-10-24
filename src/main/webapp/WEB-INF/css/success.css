@@ -1,0 +1,18 @@
+.dash-content.success {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-content.success img {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+.dash-content.success p {
+    width: 400px;
+    margin: 20px;
+    font-size: 25px;
+}
